@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Intercambio_App.View.Registro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Intercambio_App.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="LayoutRoot" Background="White">
+            <Grid Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--Title-->
+                <Grid Height="100" Background="Chocolate" VerticalAlignment="Top"  Grid.Row="0"  >
+                    <Image Stretch="UniformToFill" Source="ms-appx:///Assets/ElGarageIcon.png" MaxWidth="200" ></Image>
+                </Grid>
+                <!--UserName-->
+                <TextBlock Grid.Row="1" x:Name="SubT" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Registro" Foreground="Black"></TextBlock>
+
+                <TextBlock Text="UserName :" Grid.Row="2" Foreground="Black"   Margin="0,25,0,0"/>
+                <TextBox Name="TxtUserName" BorderBrush="LightGray" Grid.Row="2" Margin="100,0,10,0" GotFocus="Txt_GotFocus"/>
+
+                <!--Password-->
+                <TextBlock Text="Password: " Grid.Row="4" Margin="0,25,0,0" Foreground="Black" />
+                <PasswordBox Name="TxtPwd" BorderBrush="LightGray" Grid.Row="4" Margin="100,0,10,0" GotFocus="pwd_GotFocus" />
+
+                <!--Address-->
+                <TextBlock Text="Address: " Grid.Row="3" Margin="0,25,0,0" Foreground="Black" />
+                <TextBox Name="TxtAddr" BorderBrush="LightGray" Grid.Row="3" Margin="100,0,10,0" GotFocus="Txt_GotFocus"/>
+
+                <!---->
+
+                <!--Phone Number-->
+                <TextBlock Text="Phone No: " Grid.Row="5" Margin="0,25,0,0" Foreground="Black" />
+                <TextBox Name="TxtPhNo" BorderBrush="LightGray" MaxLength="10" InputScope="Digits"  Grid.Row="5" Margin="100,0,10,0" GotFocus="Txt_GotFocus"/>
+
+                <!--Email-->
+                <TextBlock Text="EmaiID: " Grid.Row="6" Margin="0,25,0,0" Foreground="Black" />
+                <TextBox Name="TxtEmail" BorderBrush="LightGray" Grid.Row="6" Margin="100,0,10,0" GotFocus="Txt_GotFocus"/>
+
+                <!--Submit Button-->
+                <Button BorderBrush="Transparent" Foreground="White"  Background="Chocolate" Content="Registrarme"  Name="BtnSubmit" Click="Submit_Click" HorizontalAlignment="Center" Grid.Row="7"/>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>
